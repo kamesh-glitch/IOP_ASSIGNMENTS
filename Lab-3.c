@@ -138,10 +138,67 @@ int main()
             case 30:
             {
                 printf("This is program 30\n");
-                
-
+                int n, n1 = 0;
+                printf("Enter a number: ");
+                scanf("%d", &n);
+                while (n > 0) {
+                    int q = n % 10;
+                    n1 = (n1 * 10) + q;
+                    n /= 10;
+                }
+                printf("The reversed number is %d\n", n1);
+                break;
             }
-
+            case 31:
+            {
+                printf("This is program 31\n");
+                int n, sum = 0;
+                printf("Enter a number: ");
+                scanf("%d", &n);
+                while (n > 0) {
+                    int q = n % 10;
+                    sum = sum + q;
+                    n /= 10;
+                }
+                printf("The sum of the digits is %d \n", sum);
+                break;
+            }
+            case 32:
+            {
+                printf("This is Program 32\n");
+                printf("Enter 5 numbers and get the max and second max: ");
+                int n[5], max=0,smax=0;
+                for(int i=0; i < 5; i++){
+                    scanf("%d", &n[i]);
+                }
+                for (int i=0; i<5; i++){
+                    if (n[i] > max){
+                        smax = max;
+                        max =n[i];
+                    }
+                }
+                printf("The max number is %d and the second max number is %d\n", max, smax);
+                break;
+            }
+            case 33:
+            {
+                printf("This is program 33\n");
+                int n[5], min=999999999, max=0;
+                printf("Enter 5 numbers and get its max and min: ");
+                for(int i=0; i < 5; i++){
+                    scanf("%d", &n[i]);
+                }
+                for (int i=0; i<5; i++){
+                    if (n[i] > max){
+                        max =n[i];
+                    } else if (n[i] < min){
+                        min = n[i];
+                    }
+                }
+                printf("The max number is %d and the min number is %d\n", max, min);
+                break;
+            }
+            
             default:
                 printf("Program does not found... :( \n");
                 scanf("%c", &z);
